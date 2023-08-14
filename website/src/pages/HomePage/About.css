@@ -1,0 +1,27 @@
+/* About.css */
+.avatar-container {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto 10px;
+  }
+  
+  .changing-word {
+    position: absolute;
+    top: -50px; /* Adjust this value to control the vertical position */
+    left: 50%; /* Center the word horizontally */
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: popUp 2s ease forwards;
+  }
+  
+  @keyframes popUp {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%) scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(-50%) scale(1);
+    }
+  }
+  
