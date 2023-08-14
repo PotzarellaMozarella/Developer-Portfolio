@@ -1,45 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Lora:ital,wght@0,400;0,500;1,400;1,500;1,600&family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Vina+Sans&display=swap');
+
+
 .App {
-  font-family: "Retro";
-  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Lora', serif;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Vina Sans', cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@font-face {
+/* @font-face {
   font-family: "Retro";
   src: local("bettynoir"),
   url("./fonts/bettynoir.ttf") format("truetype");
-}
+} */
+
+/* @font-face {
+  font-family: "Retro";
+  src: local("magicretro"),
+  url("./fonts/magicretro.ttf") format("truetype");
+} */
+
+/* @font-face {
+  font-family: "Vintage";
+  src: local("vintage"),
+  url("./fonts/Vintage.ttf") format("truetype");
+} */
