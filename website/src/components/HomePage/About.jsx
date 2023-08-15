@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { ThemeContext } from '../../components/Theme';
+import { ThemeContext } from '../Theme';
 import styled from 'styled-components';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -126,8 +126,6 @@ function AboutParisha() {
           <Text
             variant="h3"
             component="p"
-            href="/"
-            className="rotating-word" // for styling
             sx={{ color: theme.colors.blossom, fontFamily: theme.typography.logoFont }}
           >
             {wordArray[currentWordIndex]}
