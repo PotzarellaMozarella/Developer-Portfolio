@@ -40,15 +40,13 @@ const Text = styled(Typography)`
   text-decoration: none;
   padding-top: 1rem;
   padding-bottom: 1rem; 
-  @media (max-width: 900px) {
-    
-  }
 `;
 
 const Bio = styled(Typography)`
   text-decoration: none;
   font-weight: 300; 
   font-size: 1.2rem;
+  padding: 0.5rem 0; 
   @media (max-width: 900px) {
     padding: 0 4rem;
   }
@@ -90,7 +88,13 @@ const wordArray = ['Digital Marketer',
   'Rowing Enthusiast',
   'Curious Learner']; // Add your 25 words here
 
-const bio = "🚀 Recently forayed into development. 8yrs spanning E-commerce, Fintech, Apparel, Edtech, SaaS. Transformed brands, 2cr+ revenue, 100+ brand campaigns, vibrant interfaces. Geek-speak translator, problem-solving maestro, design virtuoso. Let's code the quirky way! 🌟";
+const bioTextArray = [
+  "🚀 Recently forayed into development. 8yrs spanning E-commerce, Fintech, Apparel, Edtech, SaaS.",
+  "Transformed brands, 2cr+ revenue, 100+ brand campaigns, vibrant interfaces.",
+  "Geek-speak translator, problem-solving maestro, design virtuoso.",
+  "Let's code the quirky way! 🌟",
+];
+
 // Component for the responsive app bar
 function AboutParisha() {
   const theme = useContext(ThemeContext);
@@ -111,18 +115,14 @@ function AboutParisha() {
         {/* Use the imported Avatar image */}
         <AvatarImage src={Avatar} alt="Avatar" />
         <TextContainer sx={{ color: theme.colors.peach }}>
-          <Bio sx={{ fontFamily: theme.typography.headingFont }}>
-            🚀 Recently forayed into development. 8yrs spanning E-commerce, Fintech, Apparel, Edtech, SaaS.
-          </Bio>
-          <Bio sx={{ fontFamily: theme.typography.headingFont }}>
-            Transformed brands, 2cr+ revenue, 100+ brand campaigns, vibrant interfaces.
-          </Bio>
-          <Bio sx={{ fontFamily: theme.typography.headingFont }}>
-            Geek-speak translator, problem-solving maestro, design virtuoso.
-          </Bio>
-          <Bio sx={{ fontFamily: theme.typography.headingFont }}>
-            Let's code the quirky way! 🌟
-          </Bio>
+          {bioTextArray.map((text, index) => (
+            <Bio
+              key={index}
+              sx={{ fontFamily: theme.typography.headingFont }}
+            >
+              {text}
+            </Bio>
+          ))}
           <Text
             variant="h3"
             component="p"
