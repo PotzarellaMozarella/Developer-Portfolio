@@ -15,8 +15,6 @@ import Icon from '@mui/icons-material/Face3TwoTone';
 // Array of page names for the navigation menu
 const pages = ['Experience', 'Projects', 'Contact'];
 
-
-
 // Component for the responsive app bar
 function ResponsiveAppBar() {
   const theme = useContext(ThemeContext);
@@ -35,8 +33,8 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" elevation={0} sx={{ backgroundColor: theme.colors.midnight, width: '100vw' }}>
-        <Toolbar disableGutters sx={{ backgroundColor: theme.colors.background, borderRadius: '25px', margin: '1rem', maxWidth: '100%', padding: '0 3rem'}}>
+    <AppBar position="static" elevation={0} sx={{ backgroundColor: theme.colors.blossom, width: '100vw' }}>
+        <Toolbar disableGutters sx={{ backgroundColor: theme.colors.peach, borderRadius: '25px', margin: '1rem', maxWidth: '100%', padding: '0 3rem'}}>
           {/* Logo and title */}
           <Icon sx={{ display: { xs: 'none', md: 'flex', fontSize: '2.6rem' }, padding: '1rem', color: theme.colors.peacock }} />
           <Typography

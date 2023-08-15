@@ -1,16 +1,85 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../components/Theme';
+import styled from 'styled-components'; // Import styled-components
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import Avatar from '../../assets/Parisha2.png'; // Import the Avatar image
+import Avatar from '../../assets/1.png'; // Import the Avatar image
 import Button from '@mui/material/Button';
-import './About.css'; // Create a CSS file for styling
+
+const MainContainer = styled(Box)`
+  padding-bottom: 0.5rem;
+`;
+
+const AvatarContainer = styled(Box)`
+  border-radius: 25px;
+  margin: 0 1rem;
+  display: flex;
+  padding-left: 4rem;
+  @media (max-width: 900px) {
+    flex-direction: column; 
+    align-items: center;
+    padding-left: 0;
+  }
+`;
+
+const TextContainer = styled(Box)`
+  width: 100%;
+  text-align: center;
+  align-self: center;
+  text-decoration: none;
+  padding-right: 5rem;
+  @media (max-width: 900px) {
+    padding: 2rem 4rem;
+  }
+`;
+
+const Text = styled(Typography)`
+  text-decoration: none;
+  padding-top: 1rem; /* Add padding above the Text component */
+    padding-bottom: 1rem; /* Add padding below the Text component */
+  @media (max-width: 900px) {
+    
+  }
+`;
+
+const Bio = styled(Typography)`
+  text-decoration: none;
+  @media (max-width: 900px) {
+    padding: 0 4rem;
+  }
+`;
+
+const AvatarImage = styled.img`
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  display: block;
+  padding: 3rem 3rem 3rem 5rem;
+  @media (max-width: 900px) {
+    justify-self: center;
+    padding: 1rem;
+    max-width: 250px; /* Adjust the max-width for smaller screens */
+  }
+`;
 
 // Array of words
-const wordArray = ['Marketer', 'Developer', 'Singer', 'Dancer', 'Ukulele Player', 'Mentor', 'Problem Solver', 'Pizza Lover', 'Doggo Mother', 'Orator', 'Writer', "Avid Reader"]; // Add your 25 words here
+const wordArray = ['Digital Marketer',
+    'MERN Stack Developer',
+    'Aspiring Singer',
+    'Energetic Dancer',
+    'Amateur Ukulele Player',
+    'Friendly Mentor',
+    'Innovative Problem Solver',
+    'Pizza Lover',
+    'Proud Doggo Mother',
+    'Eloquent Orator',
+    'Creative Writer',
+    'Avid Reader',
+    'Passenger Seat Occupier',
+    'Rowing Enthusiast',
+    'Curious Learner']; // Add your 25 words here
 
-
+const bio = "🚀 Recently forayed into development. 8yrs spanning E-commerce, Fintech, Apparel, Edtech, SaaS. Transformed brands, 2cr+ revenue, 100+ brand campaigns, vibrant interfaces. Geek-speak translator, problem-solving maestro, design virtuoso. Let's code the quirky way! 🌟";
 // Component for the responsive app bar
 function AboutParisha() {
     const theme = useContext(ThemeContext);
@@ -25,43 +94,28 @@ function AboutParisha() {
         return () => clearInterval(intervalId);
     }, []);
 
-
-
     return (
-        <Box sx={{ backgroundColor: 'white', paddingTop: '0.5rem' }}>
-            <Container maxWidth="xl" sx={{ backgroundColor: theme.colors.midnight, borderRadius: '25px' }}>
+        <MainContainer sx={{ backgroundColor: theme.colors.blossom }}>
+            <AvatarContainer sx={{ backgroundColor: theme.colors.peacock }}>
                 {/* Use the imported Avatar image */}
-                <img
-                    src={Avatar}
-                    alt="Avatar"
-                    style={{
-                        width: '100%', // Make the width 100% to ensure responsiveness
-                        maxWidth: '350px', // Set a max-width to avoid excessive stretching
-                        height: 'auto', // Let the height adjust automatically
-                        display: 'block', // Ensure proper spacing around the image
-                        margin: '0 auto 10px', // Center the image and add margin
-                        padding: '3rem'
-                    }}
-                />
-                <Typography
-                    variant="h6"
-                    noWrap
-                    component="a"
-                    href="/"
-                    className="rotating-word" // Add a class name for styling
-                    sx={{
-                        mr: 2,
-                        fontWeight: 600,
-                        letterSpacing: '.1rem',
-                        color: theme.colors.text,
-                        textDecoration: 'none',
-                    }}
-                >
-                    {wordArray[currentWordIndex]}
-                </Typography>
-
-            </Container>
-        </Box>
+                <AvatarImage src={Avatar} alt="Avatar" />
+                <TextContainer>
+                    <Bio sx={{ color: theme.colors.peach }}>
+                        {bio}
+                    </Bio>
+                    <Text
+                        variant="h6"
+                        noWrap
+                        component="a"
+                        href="/"
+                        className="rotating-word" // for styling
+                        sx={{ color: theme.colors.peach }}
+                    >
+                        {wordArray[currentWordIndex]}
+                    </Text>
+                </TextContainer>
+            </AvatarContainer>
+        </MainContainer>
     );
 }
 
