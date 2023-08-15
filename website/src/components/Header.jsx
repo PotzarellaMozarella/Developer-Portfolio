@@ -13,7 +13,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Icon from '@mui/icons-material/Face3TwoTone';
 
 // Array of page names for the navigation menu
-const pages = ['Experience', 'Projects', 'Contact'];
+const pages = ['About', 'Experience', 'Projects', 'Contact'];
 
 // Component for the responsive app bar
 function ResponsiveAppBar() {

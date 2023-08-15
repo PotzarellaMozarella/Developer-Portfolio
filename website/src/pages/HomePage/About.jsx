@@ -23,11 +23,14 @@ const AvatarContainer = styled(Box)`
 `;
 
 const TextContainer = styled(Box)`
+display: flex;
   width: 100%;
   text-align: center;
   align-self: center;
   text-decoration: none;
   padding-right: 5rem;
+  flex-direction: column;
+  justify-content: space-around;
   @media (max-width: 900px) {
     padding: 2rem 4rem;
   }
@@ -35,8 +38,8 @@ const TextContainer = styled(Box)`
 
 const Text = styled(Typography)`
   text-decoration: none;
-  padding-top: 1rem; /* Add padding above the Text component */
-    padding-bottom: 1rem; /* Add padding below the Text component */
+  padding-top: 1rem;
+  padding-bottom: 1rem; 
   @media (max-width: 900px) {
     
   }
@@ -44,6 +47,8 @@ const Text = styled(Typography)`
 
 const Bio = styled(Typography)`
   text-decoration: none;
+  font-weight: 300; 
+  font-size: 1.2rem;
   @media (max-width: 900px) {
     padding: 0 4rem;
   }
@@ -60,6 +65,10 @@ const AvatarImage = styled.img`
     padding: 1rem;
     max-width: 250px; /* Adjust the max-width for smaller screens */
   }
+`;
+
+const KnowMore = styled(Button)`
+  padding-bottom: 0.5rem;
 `;
 
 // Array of words
@@ -99,22 +108,31 @@ function AboutParisha() {
             <AvatarContainer sx={{ backgroundColor: theme.colors.peacock }}>
                 {/* Use the imported Avatar image */}
                 <AvatarImage src={Avatar} alt="Avatar" />
-                <TextContainer>
-                    <Bio sx={{ color: theme.colors.peach }}>
-                        {bio}
+                <TextContainer sx={{ color: theme.colors.peach }}>
+                    <Bio sx={{ fontFamily: theme.typography.headingFont }}>
+                        🚀 Recently forayed into development. 8yrs spanning E-commerce, Fintech, Apparel, Edtech, SaaS.
+                    </Bio>
+                    <Bio sx={{ fontFamily: theme.typography.headingFont }}>
+                        Transformed brands, 2cr+ revenue, 100+ brand campaigns, vibrant interfaces.
+                    </Bio>
+                    <Bio sx={{ fontFamily: theme.typography.headingFont }}>
+                        Geek-speak translator, problem-solving maestro, design virtuoso.
+                    </Bio>
+                    <Bio sx={{ fontFamily: theme.typography.headingFont }}>
+                        Let's code the quirky way! 🌟
                     </Bio>
                     <Text
-                        variant="h6"
-                        noWrap
-                        component="a"
+                        variant="h3"
+                        component="p"
                         href="/"
                         className="rotating-word" // for styling
-                        sx={{ color: theme.colors.peach }}
+                        sx={{ color: theme.colors.blossom, fontFamily: theme.typography.logoFont }}
                     >
                         {wordArray[currentWordIndex]}
                     </Text>
                 </TextContainer>
             </AvatarContainer>
+            <KnowMore>Click here to know more</KnowMore>
         </MainContainer>
     );
 }
