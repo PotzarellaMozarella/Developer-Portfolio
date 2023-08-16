@@ -130,7 +130,23 @@ function AboutParisha() {
           >
             {wordArray[currentWordIndex]}
           </Text>
-          <KnowMore variant="contained" size="medium" sx={{ backgroundColor: theme.colors.blossom, color: theme.colors.redhot, fontWeight: '550' }}>
+          <KnowMore variant="contained" size="medium" sx={{
+              backgroundColor: theme.colors.blossom,
+              color: theme.colors.redhot,
+              fontWeight: '550',
+              '&:hover': {
+                backgroundColor: theme.colors.redhot,
+                color: theme.colors.blossom,
+              },
+              '&:focus': {
+                backgroundColor: theme.colors.redhot,
+                color: theme.colors.blossom,
+              },
+              '&:active': {
+                backgroundColor: theme.colors.blossom,
+                color: theme.colors.redhot,
+              },
+            }}>
             Know more
           </KnowMore>
         </TextContainer>
