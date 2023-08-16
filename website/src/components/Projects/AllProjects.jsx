@@ -42,6 +42,7 @@ const InnerContainer = styled(Box)`
 const Heading = styled(Typography)`
  padding: 2rem;
  font-weight: 900;
+ text-align: center;
 `;
 
 const ProjectCard = styled(Card)`
@@ -58,8 +59,8 @@ function Projects() {
 
             <ProjectsContainer sx={{ backgroundColor: theme.colors.peacock }}>
                 <Heading
-                    variant="h1"
-                    sx={{ color: theme.colors.blossom, fontFamily: theme.typography.headingFont, fontSize: '2rem', fontWeight: '700' }}>
+                    variant="h3"
+                    sx={{ color: theme.colors.blossom }}>
                     Development Projects
                 </Heading>
                 <InnerContainer>
@@ -67,27 +68,44 @@ function Projects() {
                         <ProjectCard key={index}>
                             <CardMedia
                                 sx={{ height: 250 }}
-                                image={project.image} 
+                                image={project.image}
                                 title={project.name}
                             />
-                            <CardContent>
+                            <CardContent sx={{
+                                backgroundColor: theme.colors.midnight,
+                                color: theme.colors.peach
+                            }}>
                                 <Typography gutterBottom variant="h5" component="div">
                                     {project.name}
                                 </Typography>
                                 {project.about && (
-                                    <Typography variant="body2" color="text.secondary">
+                                    <Typography variant="body2" >
                                         {project.about}
                                     </Typography>
                                 )}
                             </CardContent>
-                            <CardActions>
+                            <CardActions sx={{
+                                backgroundColor: theme.colors.midnight
+                            }}>
                                 {project.link && (
-                                    <Button size="small" href={project.link} target="_blank">
+                                    <Button size="small" href={project.link} target="_blank"
+                                        sx={{
+                                            color: theme.colors.peach,
+                                            '&:hover': {
+                                                color: theme.colors.teal,
+                                            },
+                                        }}>
                                         Visit Website
                                     </Button>
                                 )}
                                 {project.github && (
-                                    <Button size="small" href={project.github} target="_blank">
+                                    <Button size="small" href={project.github} target="_blank" 
+                                    sx={{
+                                            color: theme.colors.peach,
+                                            '&:hover': {
+                                                color: theme.colors.teal,
+                                            },
+                                        }}>
                                         GitHub
                                     </Button>
                                 )}

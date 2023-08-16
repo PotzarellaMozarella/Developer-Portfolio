@@ -107,7 +107,20 @@ function Projects() {
                         backgroundColor: theme.colors.blossom,
                         color: theme.colors.redhot,
                         fontWeight: '550',
-                        margin: '1rem auto', 
+                        '&:hover': {
+                            backgroundColor: theme.colors.redhot,
+                            color: theme.colors.blossom,
+                        },
+                        '&:focus': {
+                            backgroundColor: theme.colors.redhot,
+                            color: theme.colors.blossom,
+                        },
+                        '&:active': {
+                            backgroundColor: theme.colors.blossom,
+                            color: theme.colors.redhot,
+                        },
+                        fontWeight: '550',
+                        margin: '1rem auto',
                         display: 'block',
                     }}
                 >
