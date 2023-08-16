@@ -50,8 +50,8 @@ const AboutMe = () => {
     const theme = useContext(ThemeContext);
 
     return (
-        <MainContainer sx={{ backgroundColor: theme.colors.blossom }}>
-            <ProjectsContainer sx={{ backgroundColor: theme.colors.peacock }}>
+        <MainContainer sx={{ backgroundColor: theme.colors.text }}>
+            <ProjectsContainer sx={{ backgroundColor: theme.colors.text }}>
                 <Heading
                     variant="h1"
                     sx={{

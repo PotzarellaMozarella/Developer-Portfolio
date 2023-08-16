@@ -8,7 +8,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import projects from '../Projects/ProjectArray'; // Import the projects array from the file
+import projects from '../Projects/ProjectArray';
 import { Link } from 'react-router-dom';
 
 const MainContainer = styled(Box)`
@@ -17,8 +17,7 @@ const MainContainer = styled(Box)`
 
 const ProjectsContainer = styled(Box)`
   border-radius: 25px;
-  margin: 0 1rem;
-  padding-left: 4rem;
+  margin: 1rem;
   padding-bottom: 2rem;
   @media (max-width: 900px) {
     padding-left: 0;
@@ -27,8 +26,8 @@ const ProjectsContainer = styled(Box)`
 
 const InnerContainer = styled(Box)`
   display: flex;
-  flex-wrap: wrap; /* Added flex-wrap property */
-  justify-content: center; /* Center align items horizontally */
+  flex-wrap: wrap; 
+  justify-content: center; 
   @media (max-width: 900px) {
     flex-direction: column; 
     align-items: center;
@@ -58,39 +57,56 @@ function Projects() {
     const theme = useContext(ThemeContext);
 
     return (
-        <MainContainer sx={{ backgroundColor: theme.colors.blossom }}>
-            <ProjectsContainer sx={{ backgroundColor: theme.colors.peacock }}>
+        <MainContainer sx={{ backgroundColor: theme.colors.secondary }}>
+            <ProjectsContainer sx={{ backgroundColor: theme.colors.text }}>
                 <Heading
                     variant="h3"
-                    sx={{ color: theme.colors.blossom }}>
+                    sx={{ color: theme.colors.secondary, fontFamily: theme.typography.logoFont }}>
                     Development Projects
                 </Heading>
                 <InnerContainer>
                     {projects.slice(0, 3).map((project, index) => (
                         <ProjectCard key={index}>
                             <CardMedia
-                                sx={{ height: 250 }}
-                                image={project.image || "/static/images/default-image.jpg"} // Use a default image if no image is provided
+                                sx={{ height: 250, backgroundColor: theme.colors.quaternary }}
+                                image={project.image} // Use a default image if no image is provided
                                 title={project.name}
                             />
-                            <CardContent>
+                            <CardContent sx={{
+                                backgroundColor: theme.colors.secondary,
+                                color: theme.colors.text
+                            }}>
                                 <Typography gutterBottom variant="h5" component="div">
                                     {project.name}
                                 </Typography>
                                 {project.about && (
-                                    <Typography variant="body2" color="text.secondary">
+                                    <Typography variant="body2">
                                         {project.about}
                                     </Typography>
                                 )}
                             </CardContent>
-                            <CardActions>
+                            <CardActions sx={{
+                                backgroundColor: theme.colors.primary
+                            }}>
                                 {project.link && (
-                                    <Button size="small" href={project.link} target="_blank">
+                                    <Button size="small" href={project.link} target="_blank"
+                                    sx={{
+                                            color: theme.colors.text,
+                                            '&:hover': {
+                                                color: theme.colors.secondary,
+                                            },
+                                        }}>
                                         Visit Website
                                     </Button>
                                 )}
                                 {project.github && (
-                                    <Button size="small" href={project.github} target="_blank">
+                                    <Button size="small" href={project.github} target="_blank"
+                                    sx={{
+                                            color: theme.colors.text,
+                                            '&:hover': {
+                                                color: theme.colors.secondary,
+                                            },
+                                        }}>
                                         GitHub
                                     </Button>
                                 )}
@@ -104,20 +120,20 @@ function Projects() {
                     variant="contained"
                     size="medium"
                     sx={{
-                        backgroundColor: theme.colors.blossom,
-                        color: theme.colors.redhot,
+                        backgroundColor: theme.colors.secondary,
+                        color: theme.colors.text,
                         fontWeight: '550',
                         '&:hover': {
-                            backgroundColor: theme.colors.redhot,
-                            color: theme.colors.blossom,
+                            backgroundColor: theme.colors.text,
+                            color: theme.colors.secondary,
                         },
                         '&:focus': {
-                            backgroundColor: theme.colors.redhot,
-                            color: theme.colors.blossom,
+                            backgroundColor: theme.colors.text,
+                            color: theme.colors.secondary,
                         },
                         '&:active': {
-                            backgroundColor: theme.colors.blossom,
-                            color: theme.colors.redhot,
+                            backgroundColor: theme.colors.text,
+                            color: theme.colors.secondary,
                         },
                         fontWeight: '550',
                         margin: '1rem auto',

@@ -2,7 +2,7 @@ const projects = [
     {
       name: "HappyHead",
       image: "/projects/HappyHead.png",
-      about: "A project focused on promoting happiness and well-being.",
+      about: "A gold award winning project focused on promoting happiness and well-being.",
       link: "https://p7-team-mohammad-happy-head-happyhead.vercel.app/",
       github: "https://github.com/PotzarellaMozarella/HappyHead_Mental-Health-Companion",
     },

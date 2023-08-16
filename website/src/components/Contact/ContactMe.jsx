@@ -35,11 +35,11 @@ const ContactForm = () => {
   };
 
   return (
-    <MainContainer sx={{ backgroundColor: theme.colors.blossom }}>
-      <ContactContainer sx={{ backgroundColor: theme.colors.peacock }}>
+    <MainContainer sx={{ backgroundColor: theme.colors.text }}>
+      <ContactContainer sx={{ backgroundColor: theme.colors.text }}>
         <Heading
           variant="h3"
-          sx={{ color: theme.colors.blossom }}>
+          sx={{ color: theme.colors.secondary, fontFamily: theme.typography.logoFont }}>
           Contact Me
         </Heading>
         <Typography variant="body1" sx={{ textAlign: 'center', color: theme.colors.peach, padding: '1rem' }}>
@@ -51,21 +51,21 @@ const ContactForm = () => {
             variant="contained"
             size="medium"
             sx={{
-              backgroundColor: theme.colors.blossom,
-              color: theme.colors.redhot,
-              fontWeight: '550',
-              '&:hover': {
-                backgroundColor: theme.colors.redhot,
-                color: theme.colors.blossom,
-              },
-              '&:focus': {
-                backgroundColor: theme.colors.redhot,
-                color: theme.colors.blossom,
-              },
-              '&:active': {
-                backgroundColor: theme.colors.blossom,
-                color: theme.colors.redhot,
-              },
+              backgroundColor: theme.colors.secondary,
+            color: theme.colors.text,
+            fontWeight: '550',
+            '&:hover': {
+              backgroundColor: theme.colors.text,
+              color: theme.colors.secondary,
+            },
+            '&:focus': {
+              backgroundColor: theme.colors.text,
+              color: theme.colors.secondary,
+            },
+            '&:active': {
+              backgroundColor: theme.colors.text,
+              color: theme.colors.secondary,
+            },
             }}>
             Send Email
           </Button>

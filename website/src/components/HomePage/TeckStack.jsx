@@ -62,10 +62,10 @@ function TechStack() {
     const theme = useContext(ThemeContext);
 
     return (
-        <MainContainer sx={{ backgroundColor: theme.colors.blossom }}>
-            <ProjectsContainer sx={{ backgroundColor: theme.colors.peacock }}>
-                <Paper elevation={0} style={{ padding: '2rem', backgroundColor: theme.colors.peacock}}>
-                    <Typography variant="h3" gutterBottom style={{ textAlign: 'center', color: theme.colors.blossom}}>
+        <MainContainer sx={{ backgroundColor: theme.colors.secondary }}>
+            <ProjectsContainer sx={{ backgroundColor: theme.colors.text }}>
+                <Paper elevation={0} style={{ padding: '2rem', backgroundColor: theme.colors.text}}>
+                    <Typography variant="h3" gutterBottom style={{ textAlign: 'center', color: theme.colors.secondary, fontFamily: theme.typography.logoFont }}>
                         Tech Stack
                     </Typography>
                     <Grid container spacing={2} style={{ paddingTop: '3rem' }}>

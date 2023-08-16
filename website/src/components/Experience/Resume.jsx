@@ -22,7 +22,7 @@ const WorkExperience = () => {
     const workExperienceData = [
         {
             company: 'Multiple Organisations',
-            role: 'Consultant',
+            role: 'Marketing & Brand Partnerships Consultant',
             duration: 'June 2021 - Present · 2 yrs 8 mos',
             about: 'Worked with various organisations like Lets Influence & Rusk Media as a freelance marketing & brand partnerships consultant.',
             details: [
@@ -81,7 +81,7 @@ const WorkExperience = () => {
             company: 'Amazon',
             role: 'Associate Marketing Manager - Smartphones',
             duration: 'May 2017 - Jun 2019 · 2 yrs 2 mos',
-            about: '[Amazon.com](http://amazon.com/), is a global multinational technology company focusing on e-commerce, cloud computing, online advertising, digital streaming, and artificial intelligence.',
+            about: 'Amazon, is a global multinational technology company focusing on e-commerce, cloud computing, online advertising, digital streaming, and artificial intelligence.',
             details: [
                 'Successfully orchestrated 15+ launches of flagship smartphones, including Nokia, BB, iPhone, and Huawei models, achieving average 15% increase in sales and surpassing conversion targets.',
                 'Led cross-category events for Apple and Nokia, ensuring 20% visibility growth and consistently meeting project deadlines.',
@@ -112,30 +112,48 @@ const WorkExperience = () => {
     ];
 
     return (
-        <Section sx={{ backgroundColor: theme.colors.peacock }}>
+        <Section sx={{ backgroundColor: theme.colors.primary }}>
             <Heading
                 variant="h3"
-                sx={{ color: theme.colors.peach, paddingBottom: '2rem' }}>
+                sx={{ color: theme.colors.secondary, paddingBottom: '2rem', fontFamily: theme.typography.logoFont }}>
                 My Resume
             </Heading>
-            <Typography variant="h5" sx={{ marginBottom: '0.5rem', color: theme.colors.peach }}>
-                Work Experience
+            <Typography variant="h5" sx={{ marginBottom: '0.5rem', color: theme.colors.secondary, fontFamily: theme.typography.bodyFont }}>
+                Work Experience : 8 years
             </Typography>
             {workExperienceData.map((exp, index) => (
-                <Box key={index} sx={{ marginBottom: '1rem', color: theme.colors.peach }}>
-                    <Typography variant="subtitle1">
+                <Box key={index} sx={{ marginBottom: '1rem', color: theme.colors.secondary }}>
+                    <Typography variant="subtitle1"
+                        sx={{
+                            marginBottom: '0.5rem',
+                            color: theme.colors.text,
+                            fontFamily: theme.typography.bodyFont,
+                        }}>
                         <strong>{exp.company}, {exp.role}</strong>
                     </Typography>
-                    <Typography variant="subtitle2">{exp.duration}</Typography>
-                    <Typography variant="body1">{exp.about}</Typography>
-                    {exp.details.length > 0 && (
+                    <Typography variant="subtitle2"
+                        sx={{
+                            fontFamily: theme.typography.bodyFont,
+                        }}>
+                        {exp.duration}</Typography>
+                    <Typography variant="body1"
+                        sx={{
+                            fontFamily: theme.typography.bodyFont,
+                        }}
+                    >{exp.about}</Typography>
+                    <Typography variant="body2"
+                        sx={{
+                            fontFamily: theme.typography.bodyFont,
+                        }}
+                    >{exp.details.length > 0 && (
                         <ul>
                             {exp.details.map((detail, i) => (
-                                <li key={i}>{detail}</li>
+                                <li key={i}>{detail} </li>
                             ))}
                         </ul>
-                    )}
-                    <Typography variant="body2" sx={{ fontStyle: 'italic' }}>
+                    )}</Typography>
+
+                    <Typography variant="body2" sx={{ fontStyle: 'italic', fontFamily: theme.typography.bodyFont }}>
                         Skills: {exp.skills}
                     </Typography>
                     <hr style={{ marginTop: '1rem', borderColor: theme.colors.peach }} />
@@ -167,13 +185,18 @@ const Education = () => {
     ];
 
     return (
-        <Section sx={{ backgroundColor: theme.colors.peacock }}>
-            <Typography variant="h5" sx={{ marginBottom: '0.5rem', color: theme.colors.peach }}>
+        <Section sx={{ backgroundColor: theme.colors.primary, marginTop: '1rem' }}>
+            <Typography variant="h5" sx={{ marginBottom: '0.5rem', color: theme.colors.secondary, fontFamily: theme.typography.bodyFont }}>
                 Education
             </Typography>
             {educationData.map((edu, index) => (
                 <Box key={index} sx={{ marginBottom: '1rem', color: theme.colors.peach }}>
-                    <Typography variant="subtitle1">
+                    <Typography variant="subtitle1"
+                        sx={{
+                            marginBottom: '0.5rem',
+                            color: theme.colors.text,
+                            fontFamily: theme.typography.bodyFont,
+                        }}>
                         <strong> {edu.course}, {edu.year}</strong>
                     </Typography>
                     <Typography variant="body1">{edu.college}</Typography>
@@ -186,7 +209,7 @@ const Education = () => {
 const Resume = () => {
     const theme = useContext(ThemeContext);
     return (
-        <ResumeContainer sx={{ backgroundColor: theme.colors.blossom }}>
+        <ResumeContainer sx={{ backgroundColor: theme.colors.text }}>
             <WorkExperience />
             <Education />
         </ResumeContainer>

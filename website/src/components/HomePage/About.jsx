@@ -3,11 +3,11 @@ import { ThemeContext } from '../Theme';
 import styled from 'styled-components';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import Avatar from '../../assets/1.png';
+import Avatar from '../../assets/photo.png';
 import Button from '@mui/material/Button';
 
 const MainContainer = styled(Box)`
-  padding-bottom: 0.5rem;
+  padding: 1rem 0 0.5rem;
 `;
 
 const AvatarContainer = styled(Box)`
@@ -37,7 +37,6 @@ display: flex;
 `;
 
 const Text = styled(Typography)`
-  text-decoration: none;
   padding-top: 1rem;
   padding-bottom: 1rem; 
 `;
@@ -89,7 +88,7 @@ const wordArray = ['Digital Marketer',
   'Curious Learner']; // Add your 25 words here
 
 const bioTextArray = [
-  "🚀 Recently forayed into development. 8yrs spanning E-commerce, Fintech, Apparel, Edtech, SaaS.",
+  "🚀 Recently forayed into MERN Stack development. 8yrs spanning E-commerce, Fintech, Apparel, Edtech, SaaS.",
   "Transformed brands, 2cr+ revenue, 100+ brand campaigns, vibrant interfaces.",
   "Geek-speak translator, problem-solving maestro, design virtuoso.",
   "Let's code the quirky way! 🌟",
@@ -110,15 +109,15 @@ function AboutParisha() {
   }, []);
 
   return (
-    <MainContainer sx={{ backgroundColor: theme.colors.blossom }}>
-      <AvatarContainer sx={{ backgroundColor: theme.colors.peacock }}>
+    <MainContainer sx={{ backgroundColor: theme.colors.secondary }}>
+      <AvatarContainer sx={{ backgroundColor: theme.colors.primary }}>
         {/* Use the imported Avatar image */}
         <AvatarImage src={Avatar} alt="Avatar" />
-        <TextContainer sx={{ color: theme.colors.peach }}>
+        <TextContainer>
           {bioTextArray.map((text, index) => (
             <Bio
               key={index}
-              sx={{ fontFamily: theme.typography.headingFont }}
+              sx={{ fontFamily: theme.typography.headingFont, color: theme.colors.secondary, }}
             >
               {text}
             </Bio>
@@ -126,27 +125,27 @@ function AboutParisha() {
           <Text
             variant="h3"
             component="p"
-            sx={{ color: theme.colors.blossom, fontFamily: theme.typography.logoFont }}
+            sx={{ color: theme.colors.secondary, fontFamily: theme.typography.logoFont }}
           >
             {wordArray[currentWordIndex]}
           </Text>
           <KnowMore variant="contained" size="medium" sx={{
-              backgroundColor: theme.colors.blossom,
-              color: theme.colors.redhot,
-              fontWeight: '550',
-              '&:hover': {
-                backgroundColor: theme.colors.redhot,
-                color: theme.colors.blossom,
-              },
-              '&:focus': {
-                backgroundColor: theme.colors.redhot,
-                color: theme.colors.blossom,
-              },
-              '&:active': {
-                backgroundColor: theme.colors.blossom,
-                color: theme.colors.redhot,
-              },
-            }}>
+            backgroundColor: theme.colors.text,
+            color: theme.colors.secondary,
+            fontWeight: '550',
+            '&:hover': {
+              backgroundColor: theme.colors.secondary,
+              color: theme.colors.text,
+            },
+            '&:focus': {
+              backgroundColor: theme.colors.secondary,
+              color: theme.colors.text,
+            },
+            '&:active': {
+              backgroundColor: theme.colors.secondary,
+              color: theme.colors.text,
+            },
+          }}>
             Know more
           </KnowMore>
         </TextContainer>

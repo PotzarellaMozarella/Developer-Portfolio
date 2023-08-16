@@ -9,7 +9,6 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import Icon from '@mui/icons-material/Face3TwoTone';
 import { Link } from 'react-router-dom';
 
 
@@ -34,8 +33,8 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" elevation={0} sx={{ backgroundColor: theme.colors.blossom, width: '100vw' }}>
-      <Toolbar disableGutters sx={{ backgroundColor: theme.colors.peach, borderRadius: '25px', margin: '1rem', maxWidth: '100%', padding: '0 3rem' }}>
+    <AppBar position="static" elevation={0} sx={{ backgroundColor: theme.colors.secondary, width: '100vw' }}>
+      <Toolbar disableGutters sx={{ backgroundColor: theme.colors.tertiary, borderRadius: '25px', margin: '1rem', maxWidth: '100%', padding: '0 3rem' }}>
         {/* Logo */}
         <Typography
           variant="h6"
@@ -52,13 +51,7 @@ function ResponsiveAppBar() {
             fontSize: '2rem'
           }}
         >
-          <span style={{ color: theme.colors.redhot }}>P</span>
-          <span style={{ color: theme.colors.teal, }}>a</span>
-          <span style={{ color: theme.colors.sunray }}>r</span>
-          <span style={{ color: theme.colors.blossom }}>i</span>
-          <span style={{ color: theme.colors.peacock }}>s</span>
-          <span style={{ color: theme.colors.redhot }}>h</span>
-          <span style={{ color: theme.colors.sunray }}>a</span>
+          <span style={{ color: theme.colors.text }}>Parisha</span>
         </Typography>
 
         {/* Navigation menu for small screens */}
@@ -102,7 +95,7 @@ function ResponsiveAppBar() {
                 component={Link}
                 to={`/${page.toLowerCase()}`} 
               >
-                <Typography textAlign="center" sx={{ color: [theme.colors.redhot, theme.colors.sunray, theme.colors.peacock][index % 3] }}>
+                <Typography textAlign="center" sx={{ color: theme.colors.secondary, fontFamily: theme.typography.bodyFont, }}>
                   {page}
                 </Typography>
               </MenuItem>
@@ -111,7 +104,6 @@ function ResponsiveAppBar() {
         </Box>
 
         {/* Logo and title for small screens */}
-        <Icon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1, color: theme.colors.peacock }} />
         <Typography
           variant="h5"
           noWrap
@@ -121,20 +113,14 @@ function ResponsiveAppBar() {
             mr: 2,
             display: { xs: 'flex', md: 'none' },
             flexGrow: 1,
-            fontFamily: 'retro',
+            fontFamily: theme.typography.logoFont,
             fontWeight: 700,
             letterSpacing: '.3rem',
             color: 'inherit',
             textDecoration: 'none',
           }}
         >
-          <span style={{ color: theme.colors.redhot }}>P</span>
-          <span style={{ color: theme.colors.teal, }}>a</span>
-          <span style={{ color: theme.colors.sunray }}>r</span>
-          <span style={{ color: theme.colors.blossom }}>i</span>
-          <span style={{ color: theme.colors.peacock }}>s</span>
-          <span style={{ color: theme.colors.redhot }}>h</span>
-          <span style={{ color: theme.colors.sunray }}>a</span>
+          <span style={{ color: theme.colors.text }}>Parisha</span>
         </Typography>
 
         {/* Navigation buttons for medium and large screens */}
@@ -143,15 +129,16 @@ function ResponsiveAppBar() {
           {pages.map((page, index) => (
             <Button
               key={page}
-              component={Link} // Use the Link component
+              component={Link} 
               to={`/${page.toLowerCase()}`} // Set the path based on the page name
               onClick={handleCloseNavMenu}
               sx={{
                 my: 2,
-                color: [theme.colors.redhot, theme.colors.sunray, theme.colors.peacock][index % 3], // Add color values for each index
+                color: theme.colors.text,
+                fontFamily: theme.typography.bodyFont,
                 display: 'block',
                 fontSize: '1rem',
-                textDecoration: 'none' // Remove the default button styling
+                textDecoration: 'none' 
               }}
             >
               {page}

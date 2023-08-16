@@ -55,25 +55,25 @@ function Projects() {
     const theme = useContext(ThemeContext);
 
     return (
-        <MainContainer sx={{ backgroundColor: theme.colors.blossom }}>
+        <MainContainer sx={{ backgroundColor: theme.colors.text }}>
 
-            <ProjectsContainer sx={{ backgroundColor: theme.colors.peacock }}>
+            <ProjectsContainer>
                 <Heading
                     variant="h3"
-                    sx={{ color: theme.colors.blossom }}>
+                    sx={{ color: theme.colors.secondary, paddingBottom: '2rem', fontFamily: theme.typography.logoFont }}>
                     Development Projects
                 </Heading>
                 <InnerContainer>
                     {projects.map((project, index) => (
                         <ProjectCard key={index}>
                             <CardMedia
-                                sx={{ height: 250 }}
+                                sx={{ height: 250, backgroundColor: theme.colors.quaternary }}
                                 image={project.image}
                                 title={project.name}
                             />
                             <CardContent sx={{
-                                backgroundColor: theme.colors.midnight,
-                                color: theme.colors.peach
+                                backgroundColor: theme.colors.secondary,
+                                color: theme.colors.text
                             }}>
                                 <Typography gutterBottom variant="h5" component="div">
                                     {project.name}
@@ -85,14 +85,14 @@ function Projects() {
                                 )}
                             </CardContent>
                             <CardActions sx={{
-                                backgroundColor: theme.colors.midnight
+                                backgroundColor: theme.colors.primary
                             }}>
                                 {project.link && (
                                     <Button size="small" href={project.link} target="_blank"
                                         sx={{
-                                            color: theme.colors.peach,
+                                            color: theme.colors.text,
                                             '&:hover': {
-                                                color: theme.colors.teal,
+                                                color: theme.colors.secondary,
                                             },
                                         }}>
                                         Visit Website
@@ -101,9 +101,9 @@ function Projects() {
                                 {project.github && (
                                     <Button size="small" href={project.github} target="_blank" 
                                     sx={{
-                                            color: theme.colors.peach,
+                                            color: theme.colors.text,
                                             '&:hover': {
-                                                color: theme.colors.teal,
+                                                color: theme.colors.secondary,
                                             },
                                         }}>
                                         GitHub
