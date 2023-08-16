@@ -36,8 +36,7 @@ function ResponsiveAppBar() {
   return (
     <AppBar position="static" elevation={0} sx={{ backgroundColor: theme.colors.blossom, width: '100vw' }}>
       <Toolbar disableGutters sx={{ backgroundColor: theme.colors.peach, borderRadius: '25px', margin: '1rem', maxWidth: '100%', padding: '0 3rem' }}>
-        {/* Logo and title */}
-        <Icon sx={{ display: { xs: 'none', md: 'flex', fontSize: '2.6rem' }, padding: '1rem', color: theme.colors.peacock }} />
+        {/* Logo */}
         <Typography
           variant="h6"
           noWrap
@@ -130,12 +129,12 @@ function ResponsiveAppBar() {
           }}
         >
           <span style={{ color: theme.colors.redhot }}>P</span>
-          <span style={{ color: theme.colors.teal, }}>A</span>
-          <span style={{ color: theme.colors.sunray }}>R</span>
-          <span style={{ color: theme.colors.blossom }}>I</span>
-          <span style={{ color: theme.colors.peacock }}>S</span>
-          <span style={{ color: theme.colors.redhot }}>H</span>
-          <span style={{ color: theme.colors.sunray }}>A</span>
+          <span style={{ color: theme.colors.teal, }}>a</span>
+          <span style={{ color: theme.colors.sunray }}>r</span>
+          <span style={{ color: theme.colors.blossom }}>i</span>
+          <span style={{ color: theme.colors.peacock }}>s</span>
+          <span style={{ color: theme.colors.redhot }}>h</span>
+          <span style={{ color: theme.colors.sunray }}>a</span>
         </Typography>
 
         {/* Navigation buttons for medium and large screens */}
