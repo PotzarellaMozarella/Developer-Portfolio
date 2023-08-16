@@ -134,16 +134,19 @@ const WorkExperience = () => {
                     <Typography variant="subtitle2"
                         sx={{
                             fontFamily: theme.typography.bodyFont,
+                            color: theme.colors.text,
                         }}>
                         {exp.duration}</Typography>
                     <Typography variant="body1"
                         sx={{
                             fontFamily: theme.typography.bodyFont,
+                            color: theme.colors.text,
                         }}
                     >{exp.about}</Typography>
                     <Typography variant="body2"
                         sx={{
                             fontFamily: theme.typography.bodyFont,
+                            color: theme.colors.text,
                         }}
                     >{exp.details.length > 0 && (
                         <ul>
