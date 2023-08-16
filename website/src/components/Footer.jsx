@@ -2,7 +2,10 @@ import React, { useContext } from 'react';
 import { ThemeContext } from './Theme';
 import { Typography, Link, Box, Grid, SvgIcon } from '@mui/material';
 import styled from 'styled-components';
-import Icon from '@mui/icons-material/Face3TwoTone';
+import githubImage from '../assets/github.png';
+import linkedinImage from '../assets/linkedin.png';
+
+
 
 const MainContainer = styled(Box)`
   padding: 0.5rem 0 1.5rem;
@@ -49,34 +52,24 @@ const Footer = () => {
                 </Box>
                 <Box justifyContent="space-around" textAlign="center">
                     <nav>
-                        <Link href="#" variant="body1" color={theme.colors.sunray} sx={{ marginRight: 2, textDecoration:"none" }}>
+                        <Link href="/" variant="body1" color={theme.colors.sunray} sx={{ marginRight: 2, textDecoration: "none" }}>
                             Home
                         </Link>
-                        <Link href="#" variant="body1" color={theme.colors.peacock} sx={{ marginRight: 2, textDecoration:"none" }}>
+                        <Link href="/about" variant="body1" color={theme.colors.peacock} sx={{ marginRight: 2, textDecoration: "none" }}>
                             About
                         </Link>
-                        <Link href="#" variant="body1" color={theme.colors.redhot} sx={{ textDecoration:"none" }}>
+                        <Link href="/contact" variant="body1" color={theme.colors.redhot} sx={{ textDecoration: "none" }}>
                             Contact
                         </Link>
                     </nav>
                 </Box>
-                <Box display="flex">
-                    <Link href="#" color="textSecondary" sx={{ marginRight: 2 }}>
-                        {/* Replace with your social media icon */}
-                        <SvgIcon>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                {/* Your social media SVG icon here */}
-                            </svg>
-                        </SvgIcon>
-                    </Link>
-                    <Link href="#" color="textSecondary">
-                        {/* Replace with another social media icon */}
-                        <SvgIcon>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                {/* Another social media SVG icon here */}
-                            </svg>
-                        </SvgIcon>
-                    </Link>
+                <Box display="flex" justifyContent="center" paddingTop="1rem" >
+                    <a href="https://github.com/PotzarellaMozarella" target="_blank" rel="noopener noreferrer" style={{ marginRight: '1rem' }}>
+                        <img src={githubImage} alt="GitHub" width="30" height="30" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/parishap/" target="_blank" rel="noopener noreferrer">
+                        <img src={linkedinImage} alt="LinkedIn" width="30" height="30" />
+                    </a>
                 </Box>
                 <Typography variant="body2" color={theme.colors.peacock} align="center" mt={2}>
                     &copy; {new Date().getFullYear()} Parisha's Website. All rights reserved.
