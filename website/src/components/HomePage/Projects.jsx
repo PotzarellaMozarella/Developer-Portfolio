@@ -61,8 +61,8 @@ function Projects() {
         <MainContainer sx={{ backgroundColor: theme.colors.blossom }}>
             <ProjectsContainer sx={{ backgroundColor: theme.colors.peacock }}>
                 <Heading
-                    variant="h1"
-                    sx={{ color: theme.colors.blossom, fontFamily: theme.typography.headingFont, fontSize: '2rem', fontWeight: '700' }}>
+                    variant="h3"
+                    sx={{ color: theme.colors.blossom }}>
                     Development Projects
                 </Heading>
                 <InnerContainer>
