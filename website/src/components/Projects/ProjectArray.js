@@ -42,7 +42,7 @@ const projects = [
       github: "https://github.com/PotzarellaMozarella/Pesto-Projects/tree/master/Week-14/wealthapp",
     },
     {
-        name: "Chrome-extension: LeadTracker",
+        name: "Chrome-extension",
         image: "/projects/extension.png",
         about: "A Chrome extension for tracking and managing leads.",
         link: "",
