@@ -38,7 +38,7 @@ const projects = [
       name: "Wealth Management app",
       image: "",
       about: "An app for managing personal finances and investments.",
-      link: "https://example.com/wealthmanagement",
+      link: "",
       github: "https://github.com/PotzarellaMozarella/Pesto-Projects/tree/master/Week-14/wealthapp",
     },
     {
