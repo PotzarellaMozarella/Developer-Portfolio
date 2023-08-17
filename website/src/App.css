@@ -2,27 +2,15 @@
 
 
 .App {
+  font-family: "UnicaOne";
   font-family: 'Lato', sans-serif;
   font-family: 'Lora', serif;
   font-family: 'Open Sans', sans-serif;
   font-family: 'Vina Sans', cursive;
 }
 
-
-/* @font-face {
-  font-family: "Retro";
-  src: local("bettynoir"),
-  url("./fonts/bettynoir.ttf") format("truetype");
-} */
-
-/* @font-face {
-  font-family: "Retro";
-  src: local("magicretro"),
-  url("./fonts/magicretro.ttf") format("truetype");
-} */
-
-/* @font-face {
-  font-family: "Vintage";
-  src: local("vintage"),
-  url("./fonts/Vintage.ttf") format("truetype");
-} */
+@font-face {
+  font-family: "UnicaOne";
+  src: local("UnicaOne"),
+  url("./fonts/UnicaOne.ttf") format("truetype");
+}

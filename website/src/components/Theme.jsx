@@ -12,7 +12,7 @@ export const ThemeProvider = ({ children }) => {
       text: '#F2EFEA',
     },
     typography: {
-      logoFont: "'Vina Sans', cursive",
+      logoFont: "UnicaOne",
       headingFont: "'Lato', sans-serif",
       bodyFont: "'Open Sans', sans-serif",
       otherFont: "'Open Sans', sans-serif",

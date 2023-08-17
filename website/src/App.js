@@ -6,8 +6,7 @@ import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
 import Experience from './pages/Experience/Experience';
 import './App.css';
-import { ThemeProvider } from './components/Theme'; // Import your ThemeProvider here
-
+import { ThemeProvider } from './components/Theme'; 
 
 export default function App() {
   return (
