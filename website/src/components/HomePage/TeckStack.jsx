@@ -64,13 +64,13 @@ function TechStack() {
     return (
         <MainContainer sx={{ backgroundColor: theme.colors.secondary }}>
             <ProjectsContainer sx={{ backgroundColor: theme.colors.text }}>
-                <Paper elevation={0} style={{ padding: '2rem', backgroundColor: theme.colors.text}}>
+                <Paper elevation={0} style={{ padding: '2rem', backgroundColor: theme.colors.text }}>
                     <Typography variant="h3" gutterBottom style={{ textAlign: 'center', color: theme.colors.secondary, fontFamily: theme.typography.logoFont }}>
                         Tech Stack
                     </Typography>
-                    <Grid container spacing={2} style={{ paddingTop: '3rem' }}>
+                    <Grid container spacing={2} justifyContent="center" alignItems="center" style={{ paddingTop: '3rem' }}>
                         {techStackData.map((tech, index) => (
-                            <Grid key={index} item xs={4} sm={3} md={2} sx={{ textAlign: 'center'}}>
+                            <Grid key={index} item xs={6} sm={4} md={3} lg={2} sx={{ textAlign: 'center' }}>
                                 <TechItemContainer bgColor={theme.colors.blossom}>
                                     {tech.icon}
                                     <Typography variant="body2" style={{ marginTop: '0.5rem', color: theme.colors.midnight }}>
