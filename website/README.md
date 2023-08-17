@@ -45,10 +45,10 @@ You can see a live demo of the website [here](https://developer-portfolio-bay-on
 
 ## Screenshots
 
-![Screenshot 1](screenshots/home.png)
-![Screenshot 3](screenshots/projects.png)
-![Screenshot 2](screenshots/experience.png)
-![Screenshot 3](screenshots/contact.png)
+![Screenshot 1](assets/screenshots/home.png)
+![Screenshot 3](assets/screenshots/projects.png)
+![Screenshot 2](assets/screenshots/experience.png)
+![Screenshot 3](assets/screenshots/contact.png)
 
 ## Contributing
 
