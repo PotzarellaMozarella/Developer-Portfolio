@@ -129,23 +129,26 @@ function AboutParisha() {
           >
             {wordArray[currentWordIndex]}
           </Text>
-          <KnowMore variant="contained" size="medium" sx={{
-            backgroundColor: theme.colors.text,
-            color: theme.colors.secondary,
-            fontWeight: '550',
-            '&:hover': {
-              backgroundColor: theme.colors.secondary,
-              color: theme.colors.text,
-            },
-            '&:focus': {
-              backgroundColor: theme.colors.secondary,
-              color: theme.colors.text,
-            },
-            '&:active': {
-              backgroundColor: theme.colors.secondary,
-              color: theme.colors.text,
-            },
-          }}>
+          <KnowMore variant="contained" size="medium"
+            component={Link} 
+            to={`/about`}
+            sx={{
+              backgroundColor: theme.colors.text,
+              color: theme.colors.secondary,
+              fontWeight: '550',
+              '&:hover': {
+                backgroundColor: theme.colors.secondary,
+                color: theme.colors.text,
+              },
+              '&:focus': {
+                backgroundColor: theme.colors.secondary,
+                color: theme.colors.text,
+              },
+              '&:active': {
+                backgroundColor: theme.colors.secondary,
+                color: theme.colors.text,
+              },
+            }}>
             Know more
           </KnowMore>
         </TextContainer>

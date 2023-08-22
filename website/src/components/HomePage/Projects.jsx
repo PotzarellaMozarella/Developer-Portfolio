@@ -115,8 +115,8 @@ function Projects() {
                     ))}
                 </InnerContainer>
                 <KnowMore
-                    component={Link} // Use the Link component
-                    to={`/projects`} // Set the path based on the page name
+                    component={Link} 
+                    to={`/projects`} 
                     variant="contained"
                     size="medium"
                     sx={{
