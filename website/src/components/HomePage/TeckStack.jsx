@@ -51,7 +51,6 @@ const ProjectsContainer = styled(Box)`
 `;
 
 const TechItemContainer = styled.div`
-  background-color: ${props => props.bgColor};
   padding: 1rem;
   border-radius: 10px;
   width: 5rem; 
@@ -70,8 +69,8 @@ function TechStack() {
                     </Typography>
                     <Grid container spacing={2} justifyContent="center" alignItems="center" style={{ paddingTop: '3rem' }}>
                         {techStackData.map((tech, index) => (
-                            <Grid key={index} item xs={6} sm={4} md={3} lg={2} sx={{ textAlign: 'center' }}>
-                                <TechItemContainer bgColor={theme.colors.blossom}>
+                            <Grid key={index} item xs={6} sm={4} md={3} lg={2} sx={{ textAlign: 'center', display: 'flex', justifyContent: "center", alignItems: "center" }}>
+                                <TechItemContainer>
                                     {tech.icon}
                                     <Typography variant="body2" style={{ marginTop: '0.5rem', color: theme.colors.midnight }}>
                                         {tech.name}

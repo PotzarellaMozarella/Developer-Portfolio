@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Avatar from '../../assets/photo.png';
 import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
 
 const MainContainer = styled(Box)`
   padding: 1rem 0 0.5rem;
