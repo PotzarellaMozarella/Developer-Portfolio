@@ -4,8 +4,7 @@ import { Typography, Link, Box, Grid, SvgIcon } from '@mui/material';
 import styled from 'styled-components';
 import githubImage from '../assets/github.png';
 import linkedinImage from '../assets/linkedin.png';
-
-
+import mediumImage from '../assets/medium.png';
 
 const MainContainer = styled(Box)`
   padding: 0.5rem 0 1.5rem;
@@ -61,8 +60,11 @@ const Footer = () => {
                     <a href="https://github.com/PotzarellaMozarella" target="_blank" rel="noopener noreferrer" style={{ marginRight: '1rem' }}>
                         <img src={githubImage} alt="GitHub" width="30" height="30" />
                     </a>
-                    <a href="https://www.linkedin.com/in/parishap/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/parishap/" target="_blank" rel="noopener noreferrer" style={{ marginRight: '1rem' }}>
                         <img src={linkedinImage} alt="LinkedIn" width="30" height="30" />
+                    </a>
+                    <a href="https://medium.com/@parisha.workshop" target="_blank" rel="noopener noreferrer">
+                        <img src={mediumImage} alt="Medium" width="30" height="30" />
                     </a>
                 </Box>
                 <Typography variant="body2" color={theme.colors.text} fontFamily={theme.typography.bodyFont} align="center" mt={2}>
