@@ -63,7 +63,7 @@ const Footer = () => {
                     <a href="https://www.linkedin.com/in/parishap/" target="_blank" rel="noopener noreferrer" style={{ marginRight: '1rem' }}>
                         <img src={linkedinImage} alt="LinkedIn" width="30" height="30" />
                     </a>
-                    <a href="https://medium.com/@parisha.workshop" target="_blank" rel="noopener noreferrer">
+                    <a href="https://medium.com/@PixelsAndPersonas" target="_blank" rel="noopener noreferrer">
                         <img src={mediumImage} alt="Medium" width="30" height="30" />
                     </a>
                 </Box>
